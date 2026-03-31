@@ -1,0 +1,86 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>Issued Books</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h2>Issued Books List</h2>-->
+
+<!--<a th:href="@{/books}">Back to Books</a>-->
+
+<!--<br/><br/>-->
+
+<!--<table border="1" cellpadding="6">-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>Book ID</th>-->
+<!--        <th>Person Name</th>-->
+<!--        <th>Mobile</th>-->
+<!--        <th>Issue Date</th>-->
+<!--    </tr>-->
+
+<!--    <tr th:each="issue : ${issuedBooks}">-->
+<!--        <td th:text="${issue.id}"></td>-->
+<!--        <td th:text="${issue.bookId}"></td>-->
+<!--        <td th:text="${issue.personName}"></td>-->
+<!--        <td th:text="${issue.mobile}"></td>-->
+<!--        <td th:text="${issue.issueDate}"></td>-->
+<!--        <td>-->
+<!--            <a th:href="@{'/books/return/' + ${issue.id}}">Return</a>-->
+<!--        </td>-->
+
+<!--    </tr>-->
+
+<!--</table>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Issued Books</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Issued Books</h2>
+
+    <div class="d-flex justify-content-between mb-3">
+        <a th:href="@{/books}" class="btn btn-secondary">Back to Inventory</a>
+    </div>
+
+    <table class="table table-bordered table-striped text-center">
+        <thead class="table-secondary">
+        <tr>
+            <th>ID</th>
+            <th>Book ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Issue Date</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="issue : ${issuedBooks}">
+            <td th:text="${issue.id}"></td>
+            <td th:text="${issue.bookId}"></td>
+            <td th:text="${issue.personName}"></td>
+            <td th:text="${issue.mobile}"></td>
+            <td th:text="${issue.issueDate}"></td>
+            <td>
+                <a th:href="@{'/books/return/' + ${issue.id}}" class="btn btn-success btn-sm">Return</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
