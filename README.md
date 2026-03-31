@@ -16,6 +16,7 @@ This is a Library Management System developed using Spring Boot. It helps manage
 - Spring Data JPA
 - MySQL
 - HTML, CSS 
+- Bootstrap
 
 ## ▶️ How to Run
 1. Clone the repository
@@ -24,7 +25,20 @@ This is a Library Management System developed using Spring Boot. It helps manage
 4. Run the Spring Boot application
 
 ## 📷 Screenshots
-(Add your project screenshots here)
+### Login Page
+![Login](screenshots/img1.png)
+
+### View Book
+![View Book](screenshots/img2.png)
+
+### Add Book
+![Add Book](screenshots/img3.png)
+
+### Issue Book
+![Issue Book](screenshots/img4.png)
+
+### View Issue Book
+![View Issue Book](screenshots/img5.png)
 
 ## 👨‍💻 Author
 Nipun Wani
